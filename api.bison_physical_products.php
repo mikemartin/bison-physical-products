@@ -9,7 +9,7 @@ class API_bison_physical_products extends API
     $shipping = 0;
 
     //Use Multiple Flat Rate method for physical products only
-    if ($this->core->cartHasPhysicalProduct()) {
+    if ($this->core->cartHasPhysicalProducts()) {
       $shipping = $this->calculateMultipleFlatRate();
     }
 

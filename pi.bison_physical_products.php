@@ -4,13 +4,21 @@ class Plugin_bison_physical_products extends Plugin
 {
   public function index()
   {
-    $output = $this->core->cartHasPhysicalProduct();
-    return $output;
+    return $this->core->cartHasPhysicalProducts();
   } 
 
   public function has_downloads()
   {
-    $output = $this->core->cartHasDownloads();
-    return $output;
-  }     
+    return $this->core->cartHasDownloads();
+  }   
+
+  public function order()
+  {
+    return $this->core->orderHasPhysicalProducts();
+  }
+
+  public function order_has_downloads()
+  {
+    return $this->core->orderHasDownloads();
+  }
 }
