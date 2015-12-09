@@ -34,7 +34,7 @@ class Core_bison_physical_products extends Core
   {
     $order_details = $this->addon->api('bison')->session->get('order_details');
 
-    // Return list of physical products in the cart
+    // Return list of physical products in the order
     $physical_products = array_filter($order_details['items'], function($item) { 
         $entry = Content::get($item['url']);
         return !isset($entry['download_path']);  
