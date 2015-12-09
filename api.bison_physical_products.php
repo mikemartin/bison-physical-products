@@ -1,6 +1,6 @@
 <?php
 
-class API_bison_shipping_download extends API
+class API_bison_physical_products extends API
 {
 
   public function calculateShipping()
